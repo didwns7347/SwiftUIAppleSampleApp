@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct CirecleImage: View {
+    var image : Image
     var body: some View {
         Image("turtlerock")
             .resizable()
@@ -22,6 +23,6 @@ struct CirecleImage: View {
 
 struct CirecleImage_Previews: PreviewProvider {
     static var previews: some View {
-        CirecleImage()
+        CirecleImage(image: Image("turlerock"))
     }
 }
