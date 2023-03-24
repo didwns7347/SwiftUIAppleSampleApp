@@ -20,16 +20,16 @@ struct Landmark: Hashable, Codable {
         Image(imageName)
     }
     
-    private var coordinator : Coordinates
-    var locationCoordinate: CLLocationCoordinate2D{
-        CLLocationCoordinate2D(
-            latitude: coordinator.latitude,
-            longitude: coordinator.longtitude
-            )
-    }
+    private var coordinates : Coordinates
+    var locationCoordinate: CLLocationCoordinate2D {
+            CLLocationCoordinate2D(
+                latitude: coordinates.latitude,
+                longitude: coordinates.longitude)
+        }
     
     struct Coordinates : Hashable , Codable{
-        var latitude : Double
-        var longtitude : Double
+        var latitude: Double
+        var longitude: Double
     }
+
 }
