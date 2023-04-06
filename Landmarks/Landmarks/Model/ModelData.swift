@@ -4,9 +4,17 @@
 //
 //  Created by yangjs on 2023/03/24.
 //
-
+/*
+ 렌드마크스의 페이버리트를 적용하기 위해서는
+ */
 import Foundation
-var landmarks: [Landmark] = load("landmarkData.json")
+import Combine
+
+final class ModelData : ObservableObject{
+    @Published var landmarks: [Landmark] = load("landmarkData.json")
+}
+
+
 
 func load<T: Decodable>(_ filename : String) -> T{
     let data : Data
